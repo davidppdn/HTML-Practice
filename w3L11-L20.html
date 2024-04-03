@@ -1,6 +1,108 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <!--
+            Alternative to 'style' in the <head> section:
+                <link rel "stylesheet" href="styles.css">
+
+            The file looks something like:
+            body    {
+                background-color: powderblue;
+
+            for links, we also have a:hover and a:active
+            A link can also be styled as a button using background colour, padding etc
+            }
+        -->
+        <style>
+            body {background-color: powderblue;}
+            h1   {color: blue;}
+            p    {
+                color: red;
+                padding:30px; 
+                margin: 50px;
+            }
+
+            a:link {
+                color: green;
+                background-color: transparent;
+                text-decoration: none;
+            }
+
+            a:visited {
+                color: pink;
+                background-color: aqua;
+                text-decoration: none;
+            }
+
+        </style>
+
+    </head>
     <body>
-        
+        <h1 style="background-color: dodgerblue;"> Background supported Colours </h1>
+        <p style="background-color: tomato;"> Background supported Colours </p>
+
+        <p style="color: mediumseagreen"> Text supported colours </p>
+        <p style="border:2px solid Tomato;"> Border </p> <!-- border: pixels style color-->
+
+        <h2 style="background-color: rgb(111,222,123);"> RGB colour </h2>
+        <p style="background-color: rgb(111,222,123,0.2);"> RGB colour </p>
+        <!--
+            RGB if all three colours are equal = gray scale
+            if we add a value at the end of rgb, we can change its opacity, 0 - 1
+        -->
+
+        <!-- INLINE CSS -->
+        <!-- 
+            Inline CSS uses the 'style' attribute of a HTML element. 
+            We can see this being done above
+        -->
+
+        <!-- INTERNAL CSS -->
+        <!--
+            An internal CSS is used to define a style for a single HTML page
+            It is defined in the <head> section within a style element.
+            This can also be seen done above. If an element doesnt have a style, this becomes the default one.
+            But, overidding is possible as seen on line 15.
+        -->
+
+        <!-- EXTERNAL CSS -->
+        <!--
+            an external style sheet is used to define the style for many html pages
+        -->
+
+        <!-- padding is the amount of pixels between the text and the border-->
+        <!-- margin is the amount of pixels outside the border-->
+
+        <!-- 
+            HTML LINKS
+            the 'target' attribute specifies where to open a link document
+            _self - same window
+            _blank - in window or tab
+            _parent - opens doc in parent frame
+            _top - opens doc in the full body of the window
+
+            ABSOLUTE URLS
+            have the www.
+            relatvie urls without the https://www.
+
+            To usage an image as a link, just but the <img> tag inside the <a>. See below
+
+            You can use <button> to add a button to send someone somewhere
+        -->
+        <a href="https://learning.monash.edu/?redirect=0" target="_blank">
+            <img src="doge1.jpg" alt="link to monash">
+        </a>
+
+        <a href="mailto:david.ppdn@gmail.com"> send emial to myself</a> <!-- mailto for sending email-->
+
+        <a href="https://learning.monash.edu/?redirect=0" target="_blank">
+            <button> Click me to go to monash </button>
+        </a>
+
+        <!-- these two below you can construct a jumpable link, you need the #-->
+        <h2 id="C4">Chapter 4</h2>
+
+        <a href="#C4"> Jump to chapter 4</a>
+        <!-- you can also add a jumpable link to another page-->
     </body>
 </html>
