@@ -70,7 +70,7 @@
             an external style sheet is used to define the style for many html pages
         -->
 
-        <!-- padding is the amount of pixels between the text and the border-->
+        <!-- padding is the amount of pixels between the text and the border, you can choose which direction of padding you want-->
         <!-- margin is the amount of pixels outside the border-->
 
         <!-- 
@@ -104,5 +104,21 @@
 
         <a href="#C4"> Jump to chapter 4</a>
         <!-- you can also add a jumpable link to another page-->
+
+        <p> <img src="doge1.jpg" alt="doge" style="float:right;">here is a paragrpah </p>
+
+        <!-- image maps-->
+        <img src="doge1.jpg" alt="test" usemap="#workmap">
+        <!-- we use usemap with a # to create a link between the image and the created image map-->
+        <map name="workmap">
+            <area shape ="rect" coords="34,44,270,350" alt="dog" href="https://learning.monash.edu/?redirect=0">
+        </map>
+        <!-- the area we can define to be rectangle, circle, polygonal region, default(entire region)
+        for rectangle we need two corners
+        for circle we need a center and a radius
+        for poly we can use as many coords as we want, but they have to be in order
+
+        We also have <picture> which defines a container for multiple image resources
+        -->
     </body>
 </html>
